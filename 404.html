@@ -1,35 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
     <script>
-        // Get the current path
+        // Handle all routes and redirect to index.html with proper parameters
         const path = window.location.pathname;
+        const search = window.location.search;
+        const hash = window.location.hash;
         
-        // Check if it's a post route
-        if (path.startsWith('/post/')) {
-            // Extract postId from path like "/post/123" -> "123"
-            const postId = path.split('/post/')[1];
-            
-            // Redirect to index.html with the post route as hash or query parameter
-            window.location.href = `/${window.location.search}${window.location.hash}`;
-            
-            // Alternative: Use query parameters
-            // window.location.href = `/?post=${postId}`;
-            
-            // Alternative: Use hash routing
-            // window.location.href = `/#/post/${postId}`;
-        } else {
-            // For other 404s, redirect to home
-            window.location.href = '/';
+        // Extract post ID from paths like:
+        // /denis-marav/post/123
+        // /Avelia/post/123
+        if (path.includes('/post/')) {
+            const segments = path.split('/');
+            const postIndex = segments.findIndex(segment => segment === 'post');
+            if (postIndex !== -1 && segments.length > postIndex + 1) {
+                const postId = segments[postIndex + 1];
+                // Redirect to main page with post ID as query parameter
+                window.location.href = `/${search}${hash}#post=${postId}`;
+                return;
+            }
         }
+        
+        // Extract profile ID
+        if (path.includes('/profile/')) {
+            const segments = path.split('/');
+            const profileIndex = segments.findIndex(segment => segment === 'profile');
+            if (profileIndex !== -1 && segments.length > profileIndex + 1) {
+                const profileId = segments[profileIndex + 1];
+                window.location.href = `/${search}${hash}#profile=${profileId}`;
+                return;
+            }
+        }
+        
+        // Extract user ID
+        if (path.includes('/user/')) {
+            const segments = path.split('/');
+            const userIndex = segments.findIndex(segment => segment === 'user');
+            if (userIndex !== -1 && segments.length > userIndex + 1) {
+                const userId = segments[userIndex + 1];
+                window.location.href = `/${search}${hash}#user=${userId}`;
+                return;
+            }
+        }
+        
+        // For all other routes, redirect to home
+        window.location.href = `/${search}${hash}`;
     </script>
 </head>
 <body>
     <noscript>
-        <p>Please enable JavaScript to view this page properly.</p>
-        <p><a href="/">Go to Home</a></p>
+        <h1>Page Not Found</h1>
+        <p>This page requires JavaScript to redirect properly.</p>
+        <p><a href="/">Go to Home Page</a></p>
     </noscript>
+    
+    <div style="text-align: center; margin-top: 50px;">
+        <h2>Redirecting...</h2>
+        <p>If you are not redirected automatically, <a href="/">click here</a>.</p>
+    </div>
 </body>
 </html>
