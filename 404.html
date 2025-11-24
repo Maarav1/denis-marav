@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+        // Get the current path
+        const path = window.location.pathname;
+        
+        // Check if it's a post route
+        if (path.startsWith('/post/')) {
+            // Extract postId from path like "/post/123" -> "123"
+            const postId = path.split('/post/')[1];
+            
+            // Redirect to index.html with the post route as hash or query parameter
+            window.location.href = `/${window.location.search}${window.location.hash}`;
+            
+            // Alternative: Use query parameters
+            // window.location.href = `/?post=${postId}`;
+            
+            // Alternative: Use hash routing
+            // window.location.href = `/#/post/${postId}`;
+        } else {
+            // For other 404s, redirect to home
+            window.location.href = '/';
+        }
+    </script>
+</head>
+<body>
+    <noscript>
+        <p>Please enable JavaScript to view this page properly.</p>
+        <p><a href="/">Go to Home</a></p>
+    </noscript>
+</body>
+</html>
