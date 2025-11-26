@@ -6,7 +6,7 @@
 
   <title>ArinaCave App – Smart All-in-One Messaging & Connections</title>
   <meta name="description" content="Download ArinaCave: Smart messaging app for meaningful connections, family, and friends. Free Android APK with minimal ads by Denis Marav." />
-  <meta name="keywords" content="ArinaCave, messaging app, Denis Marav, Dating apps, Android chat, Denis mashedi, Love, free APK, relationship, social app, Firebase, simple messenger" />
+  <meta name="keywords" content="ArinaCave, messaging app, Android chat, free APK, Denis Marav, Flutter app, social app, Firebase" />
   <meta name="author" content="Denis Marav" />
 
   <!-- Open Graph -->
@@ -22,12 +22,14 @@
   <meta name="twitter:description" content="Simple, secure, and focused messaging for real people." />
   <meta name="twitter:image" content="https://maarav1.github.io/denis-marav/feature-graphic.png" />
 
+  <!-- PWA -->
   <link rel="manifest" href="manifest.json" />
   <link rel="canonical" href="https://maarav1.github.io/denis-marav/" />
   <meta name="google-site-verification" content="drZ4W9jePTgYd2dKGnjhqQ98t5OCkZC5nc5dEeC3kts" />
+
   <link rel="stylesheet" href="styles.css">
 
-  <!-- Structured Data for SEO -->
+  <!-- Structured Data -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -35,30 +37,23 @@
       "name": "ArinaCave",
       "operatingSystem": "Android",
       "applicationCategory": "CommunicationApplication",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "author": {
-        "@type": "Person",
-        "name": "Denis Marav",
-        "url": "https://maarav1.github.io/denis-marav/"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.5",
-        "ratingCount": "1"
-      },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "author": { "@type": "Person", "name": "Denis Marav" },
       "downloadUrl": "https://github.com/Maarav1/denis-marav/releases/download/1.1/app-release.apk",
-      "screenshot": "https://maarav1.github.io/denis-marav/Screenshot_3.png",
-      "keywords": "ArinaCave App, ArinaCave, Denis Marav, Android app download, messaging app, meaningful connections, family, news, dating, relationships, lifestyle, mental health support, love"
+      "screenshot": "https://maarav1.github.io/denis-marav/Screenshot_3.png"
     }
   </script>
 </head>
 
 <body>
 <!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'GA_MEASUREMENT_ID');
+</script>
 
 <!-- Redirect Overlay -->
 <div id="redirectOverlay" class="redirect-overlay" style="display:none;">
@@ -74,7 +69,6 @@
   </div>
 </div>
 
-<!-- Header -->
 <header>
   <div class="container">
     <h1>ArinaCave</h1>
@@ -82,7 +76,6 @@
   </div>
 </header>
 
-<!-- Navigation -->
 <nav>
   <div class="container">
     <ul>
@@ -95,19 +88,25 @@
   </div>
 </nav>
 
-<!-- Main Content -->
 <main class="container">
+
   <!-- Hero -->
   <section class="hero-section">
     <h2>Smart All-In-One App for Real Connections</h2>
     <p>ArinaCave combines messaging, relationships, and meaningful connections in one simple app.</p>
     <div class="cta-buttons">
-      <a href="#download" class="cta-btn primary">Download Free APK</a>
+      <!-- UPDATED: DIRECT DOWNLOAD BUTTON -->
+      <a href="https://github.com/Maarav1/denis-marav/releases/download/1.1/app-release.apk"
+         class="cta-btn primary"
+         download>
+         Download Free APK
+      </a>
+
       <a href="#features" class="cta-btn secondary">Learn More</a>
     </div>
   </section>
 
-  <!-- Download -->
+  <!-- Download Section -->
   <section id="download" class="section">
     <h2>Download ArinaCave</h2>
     <p>Get the latest version free. Lightweight, private, and easy to use.</p>
@@ -116,8 +115,13 @@
       <h3>📱 ArinaCave v1.0.0</h3>
       <p><strong>First official release!</strong> Experience smart, simple communication.</p>
 
+      <!-- Primary Download Button -->
       <a href="https://github.com/Maarav1/denis-marav/releases/download/1.1/app-release.apk"
-         class="download-btn primary" download>📥 Download APK (54 MB)</a>
+         class="download-btn primary"
+         download>
+         📥 Download APK (54 MB)
+      </a>
+
       <p class="file-info">Direct Android installation • Free • Minimal ads</p>
 
       <h4>How to Install:</h4>
@@ -149,21 +153,25 @@
         <h3>💬 Simple & Clean</h3>
         <p>No clutter — just clear, focused messaging.</p>
       </div>
+
       <div class="feature-card">
-        <h3>⚡ Fast & Lightweight</h3>
-        <p>Runs smoothly even on older Android phones.</p>
+        <h3>⚡ Optimized Performance</h3>
+        <p>Runs smoothly on low-end devices with efficient resource usage.</p>
       </div>
+
       <div class="feature-card">
-        <h3>🔒 Private & Secure</h3>
-        <p>No data mining, tracking, or invasive permissions.</p>
+        <h3>🔒 Secure Architecture</h3>
+        <p>Encrypted backend with strict privacy-first policies.</p>
       </div>
+
       <div class="feature-card">
-        <h3>📸 Easy Sharing</h3>
-        <p>Send photos and media instantly with family or friends.</p>
+        <h3>📸 Media Smart</h3>
+        <p>Cloud-optimized media sharing powered by Firebase.</p>
       </div>
+
       <div class="feature-card">
-        <h3>🎯 Focused Design</h3>
-        <p>Stay connected without endless scrolling distractions.</p>
+        <h3>🚀 Future Ready</h3>
+        <p>Built on Flutter for long-term scalability and rapid feature rollout.</p>
       </div>
     </div>
   </section>
@@ -171,8 +179,8 @@
   <!-- About -->
   <section id="about" class="section">
     <h2>About ArinaCave</h2>
-    <p><strong>ArinaCave brings back meaningful communication.</strong> In a world of noisy platforms, it’s built to simplify and reconnect people to what truly matters — family, friends, and genuine connection.</p>
-    <p>Created with modern Flutter technology and Firebase backend, ArinaCave ensures speed, privacy, and reliability in every message.</p>
+    <p><strong>ArinaCave brings back meaningful communication.</strong></p>
+    <p>Created with Flutter and Firebase to ensure modern performance, privacy, and reliability.</p>
   </section>
 
   <!-- Developer -->
@@ -180,30 +188,33 @@
     <h2>About the Developer</h2>
     <img src="mbari.jpg" alt="Denis Marav" width="280" />
     <h3>Denis Marav</h3>
-    <p>Mobile app developer from Kenya, passionate about creating simple, human-centered apps using Flutter and Firebase.</p>
-    <p>I built ArinaCave to promote real communication, away from cluttered social apps. Every feature focuses on clarity, privacy, and connection.</p>
-    <p>download ArinaCave Today and start enjoying the beauty of life.</p>
+    <p>Mobile app developer from Kenya, creating simple, human-centered apps using Flutter and Firebase.</p>
     <p><a href="mailto:denismarav@gmail.com" class="social-link">Contact Developer</a></p>
   </section>
+
 </main>
 
-<!-- Footer -->
 <footer>
   <div class="container footer-content">
     <div>
       <h4>ArinaCave</h4>
       <p>Smart, simple app for genuine communication.</p>
     </div>
+
     <div>
       <h4>Developer</h4>
       <p>Denis Marav – Flutter Developer</p>
     </div>
+
     <div>
       <h4>Contact</h4>
       <p>Email: denismarav@gmail.com<br />Location: Kisumu, Kenya</p>
     </div>
   </div>
-  <p class="footer-bottom">© 2025 Denis Marav | All rights reserved | <a href="privacy-policy.html">Privacy Policy</a></p>
+
+  <p class="footer-bottom">© 2025 Denis Marav | All rights reserved | 
+    <a href="privacy-policy.html">Privacy Policy</a>
+  </p>
 </footer>
 
 <!-- Deep Link Script -->
@@ -215,14 +226,14 @@
   }
 
   function showRedirectOverlay(postId) {
-    const overlay = document.getElementById('redirectOverlay');
-    overlay.style.display = 'flex';
+    document.getElementById('redirectOverlay').style.display = 'flex';
     openApp(postId);
   }
 
   function openApp(postId) {
-    const appLink = `arinacave://post/${postId}`;
-    window.location.href = appLink;
+    const link = `arinacave://post/${postId}`;
+    window.location.href = link;
+
     setTimeout(() => {
       if (!document.hidden) {
         document.querySelector('.redirect-content h3').textContent = 'ArinaCave App Required';
@@ -233,12 +244,13 @@
 
   document.getElementById('openAppBtn').onclick = () => openApp('sample');
   document.getElementById('downloadAppBtn').onclick = () =>
-    (window.location.href = 'https://github.com/Maarav1/denis-marav/releases/download/1.1/app-release.apk');
+      window.location.href = 'https://github.com/Maarav1/denis-marav/releases/download/1.1/app-release.apk';
   document.getElementById('cancelRedirectBtn').onclick = () =>
-    (document.getElementById('redirectOverlay').style.display = 'none');
+      document.getElementById('redirectOverlay').style.display = 'none';
 
   document.addEventListener('DOMContentLoaded', handleDeepLinks);
 </script>
+
 <script src="script.js"></script>
 </body>
 </html>
